@@ -3,7 +3,7 @@
 
 EP-MK1 is a real-time physical model of an Electric Piano built using Pure Data and Camomile.
 <h2 align="center">
-  <a href="https://github.com/pierreguillot/Camomile/wiki">Download EP-MK1 v2.1</a>
+  <a href="https://github.com/MikeMorenoAudio/EP-MK1/releases/tag/v2.2">Download EP-MK1 v2.2</a>
 </h2>
 
 ### Demo
