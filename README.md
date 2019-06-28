@@ -6,8 +6,9 @@ EP-MK1 is a real-time physical model of an Electric Piano built using Pure Data 
   <a href="https://github.com/MikeMorenoAudio/EP-MK1/releases/tag/v2.2">Download EP-MK1 v2.2</a>
 </h2>
 
-### Demo
+## Demo
 [![EP-MK1 Demo](https://img.youtube.com/vi/bhRGsiYCsMs/0.jpg)](https://youtu.be/bhRGsiYCsMs "EP-MK1 Demo")
+
 
 ## Copyright
 
@@ -17,3 +18,12 @@ Except as otherwise noted, all files in the EP-MK1 distribution are
 
 For information on usage and redistribution, and for a DISCLAIMER OF ALL
 WARRANTIES, see License.txt included in the EP-MK1 distribution.
+
+### Author
+
+- [Miguel Moreno](https://github.com/MikeMorenoAudio)
+
+### Credits
+
+- [Pure Data](http://msp.ucsd.edu/software.html) by Miller Puckette and others
+- [Camomile](https://github.com/pierreguillot/Camomile) by Pierre Guillot
