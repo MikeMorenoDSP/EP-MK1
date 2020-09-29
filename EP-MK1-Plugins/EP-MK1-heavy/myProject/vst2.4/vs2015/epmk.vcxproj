@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{357760DB-7A12-466C-BFB5-9F946483CE8C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>epmk</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)..\build\win\x86\debug\</OutDir>
+    <IntDir>$(SolutionDir)intermediate\win\x86\debug\$(ProjectName)\</IntDir>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)..\build\win\x64\debug\</OutDir>
+    <IntDir>$(SolutionDir)intermediate\win\x64\debug\$(ProjectName)\</IntDir>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)..\build\win\x86\release\</OutDir>
+    <IntDir>$(SolutionDir)intermediate\win\x86\release\$(ProjectName)\</IntDir>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)..\build\win\x64\release\</OutDir>
+    <IntDir>$(SolutionDir)intermediate\win\x64\release\$(ProjectName)\</IntDir>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(IntDir)$(ProjectName).pdb</ProgramDatabaseFile>
+      <ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExceptionHandling>false</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(IntDir)$(ProjectName).pdb</ProgramDatabaseFile>
+      <ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;HV_SIMD_SSE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(IntDir)$(ProjectName).pdb</ProgramDatabaseFile>
+      <ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;HV_SIMD_SSE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExceptionHandling>false</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(IntDir)$(ProjectName).pdb</ProgramDatabaseFile>
+      <ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\source\HvSignalVar.h" />
+    <ClInclude Include="..\source\HeavyContext.hpp" />
+    <ClInclude Include="..\source\Heavy_epmk.hpp" />
+    <ClInclude Include="..\source\HvSignalRPole.h" />
+    <ClInclude Include="..\source\HvTable.h" />
+    <ClInclude Include="..\source\HvSignalPhasor.h" />
+    <ClInclude Include="..\source\HvControlSlice.h" />
+    <ClInclude Include="..\source\HvHeavy.h" />
+    <ClInclude Include="..\source\HvControlPack.h" />
+    <ClInclude Include="..\source\HvControlTabread.h" />
+    <ClInclude Include="..\source\HvMessage.h" />
+    <ClInclude Include="..\source\HvMessageQueue.h" />
+    <ClInclude Include="..\source\HvControlIf.h" />
+    <ClInclude Include="..\source\HvMessagePool.h" />
+    <ClInclude Include="..\source\HvSignalDel1.h" />
+    <ClInclude Include="..\source\HvControlBinop.h" />
+    <ClInclude Include="..\source\HeavyContextInterface.hpp" />
+    <ClInclude Include="..\source\HvControlCast.h" />
+    <ClInclude Include="..\source\HvControlUnop.h" />
+    <ClInclude Include="..\source\HvUtils.h" />
+    <ClInclude Include="..\source\HvControlDelay.h" />
+    <ClInclude Include="..\source\HvControlSystem.h" />
+    <ClInclude Include="..\source\HvMath.h" />
+    <ClInclude Include="..\source\HvControlTabwrite.h" />
+    <ClInclude Include="..\source\HvControlVar.h" />
+    <ClInclude Include="..\source\HvSignalBiquad.h" />
+    <ClInclude Include="..\source\Heavy_epmk.h" />
+    <ClInclude Include="..\source\HvHeavyInternal.h" />
+    <ClInclude Include="..\source\HvSignalLine.h" />
+    <ClInclude Include="..\source\HeavyVst2_epmk.hpp" />
+    <ClInclude Include="..\source\HvLightPipe.h" />
+    <ClInclude Include="..\source\vst2\aeffeditor.h" />
+    <ClInclude Include="..\source\vst2\audioeffect.h" />
+    <ClInclude Include="..\source\vst2\audioeffectx.h" />
+    <ClInclude Include="..\source\vst2\pluginterfaces\vst2.x\aeffect.h" />
+    <ClInclude Include="..\source\vst2\pluginterfaces\vst2.x\aeffectx.h" />
+    <ClInclude Include="..\source\vst2\pluginterfaces\vst2.x\vstfxstore.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\source\HvUtils.c" />
+    <ClCompile Include="..\source\HvControlUnop.c" />
+    <ClCompile Include="..\source\HvControlCast.c" />
+    <ClCompile Include="..\source\HvControlBinop.c" />
+    <ClCompile Include="..\source\HvControlSystem.c" />
+    <ClCompile Include="..\source\HvControlDelay.c" />
+    <ClCompile Include="..\source\HeavyVst2_epmk.cpp" />
+    <ClCompile Include="..\source\HvSignalLine.c" />
+    <ClCompile Include="..\source\HvSignalBiquad.c" />
+    <ClCompile Include="..\source\HvControlTabwrite.c" />
+    <ClCompile Include="..\source\HvControlVar.c" />
+    <ClCompile Include="..\source\HvHeavy.cpp" />
+    <ClCompile Include="..\source\HvLightPipe.c" />
+    <ClCompile Include="..\source\HvSignalRPole.c" />
+    <ClCompile Include="..\source\HvSignalVar.c" />
+    <ClCompile Include="..\source\HvControlTabread.c" />
+    <ClCompile Include="..\source\HvMessage.c" />
+    <ClCompile Include="..\source\HvControlPack.c" />
+    <ClCompile Include="..\source\HvControlSlice.c" />
+    <ClCompile Include="..\source\HvSignalPhasor.c" />
+    <ClCompile Include="..\source\HvTable.c" />
+    <ClCompile Include="..\source\HvSignalDel1.c" />
+    <ClCompile Include="..\source\HvControlIf.c" />
+    <ClCompile Include="..\source\HvMessageQueue.c" />
+    <ClCompile Include="..\source\HeavyContext.cpp" />
+    <ClCompile Include="..\source\HvMessagePool.c" />
+    <ClCompile Include="..\source\Heavy_epmk.cpp" />
+    <ClCompile Include="..\source\vst2\audioeffect.cpp" />
+    <ClCompile Include="..\source\vst2\audioeffectx.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

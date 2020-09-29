@@ -1,0 +1,492 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10531700F5D24DC88D0720E /* HvUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = 64AFFCE0BD07CDFB3EB5CF06 /* HvUtils.c */; };
+		BE14D238724569589B22F69F /* HvControlUnop.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F64D733D40AF05E19D2FF0F /* HvControlUnop.c */; };
+		7871CE173FE09349B703ACC9 /* HvControlCast.c in Sources */ = {isa = PBXBuildFile; fileRef = CE8C319C6B070F22AF896D3D /* HvControlCast.c */; };
+		D93E61C60382DE636916E741 /* HvControlBinop.c in Sources */ = {isa = PBXBuildFile; fileRef = 9E4958191AF8A9364B0A8BDD /* HvControlBinop.c */; };
+		9C00605BEAC64AB259BF7601 /* HvControlSystem.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B32EDEF188DEC66F0C521D6 /* HvControlSystem.c */; };
+		76930517BE8FF04810682B10 /* HvControlDelay.c in Sources */ = {isa = PBXBuildFile; fileRef = EEBE43C111A94FD2BF4A64B6 /* HvControlDelay.c */; };
+		DD250AC9A856437A472A5120 /* HeavyVst2_epmk.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED794FF56F8B2CC325BFE81 /* HeavyVst2_epmk.cpp */; };
+		C06AC917F3C93D35AD3286CE /* HvSignalLine.c in Sources */ = {isa = PBXBuildFile; fileRef = 8063BC771379620AD9BDCA45 /* HvSignalLine.c */; };
+		5C5D249E5A9E3EEB705D62FF /* HvSignalBiquad.c in Sources */ = {isa = PBXBuildFile; fileRef = 3ED35C0FD1D4B40EEE86E2E0 /* HvSignalBiquad.c */; };
+		004A1C8B62B1BDA2CF7A3514 /* HvControlTabwrite.c in Sources */ = {isa = PBXBuildFile; fileRef = 4110CB54001109C30AF1D967 /* HvControlTabwrite.c */; };
+		4003D81DCFA9CFAEABC4924F /* HvControlVar.c in Sources */ = {isa = PBXBuildFile; fileRef = 56737F77C1D31D9834298CFD /* HvControlVar.c */; };
+		F57B380CD7FFB60906DD3362 /* HvHeavy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 454F7F6845208EC973180730 /* HvHeavy.cpp */; };
+		D39C4FCDBA5685538D4FCDDE /* HvLightPipe.c in Sources */ = {isa = PBXBuildFile; fileRef = 5CE58FA2A811A9BF79964921 /* HvLightPipe.c */; };
+		DC3BFF73C7F6A3835D60A209 /* HvSignalRPole.c in Sources */ = {isa = PBXBuildFile; fileRef = 04A1EAEEAAF93579F0A519F1 /* HvSignalRPole.c */; };
+		E272CCC8BB4D1CAFDD035CA6 /* HvSignalVar.c in Sources */ = {isa = PBXBuildFile; fileRef = 0EB97D280EAED44B8F57DFF1 /* HvSignalVar.c */; };
+		914ECA3B47C464E50750B0B2 /* HvControlTabread.c in Sources */ = {isa = PBXBuildFile; fileRef = 34F95753E4098E57595E3727 /* HvControlTabread.c */; };
+		52B75B1393CD6DE1FD4F5F0E /* HvMessage.c in Sources */ = {isa = PBXBuildFile; fileRef = 4A8714BD23361ACEE6EE4DF6 /* HvMessage.c */; };
+		CFCE1511229BD00AD89667B8 /* HvControlPack.c in Sources */ = {isa = PBXBuildFile; fileRef = CA752B34A87AAD5D35071C87 /* HvControlPack.c */; };
+		A468DB7832130C4B9FD58185 /* HvControlSlice.c in Sources */ = {isa = PBXBuildFile; fileRef = 9ECDB82E48CDD05997E1B004 /* HvControlSlice.c */; };
+		25D90D61EA7B5157046EDD5A /* HvSignalPhasor.c in Sources */ = {isa = PBXBuildFile; fileRef = 7FC2753A001FA5BD0EC207E4 /* HvSignalPhasor.c */; };
+		7764B9BACD53B060CE745576 /* HvTable.c in Sources */ = {isa = PBXBuildFile; fileRef = 02C1E89B88741268A29EE503 /* HvTable.c */; };
+		C83E84C88F5211A89A205E60 /* HvSignalDel1.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F321A3035D48261DF283DBD /* HvSignalDel1.c */; };
+		7314E3463FFC6F915AB98767 /* HvControlIf.c in Sources */ = {isa = PBXBuildFile; fileRef = 23EABC56A4A5EFC8525EAFE1 /* HvControlIf.c */; };
+		CE9FFA524C763F79CC694150 /* HvMessageQueue.c in Sources */ = {isa = PBXBuildFile; fileRef = 8C05428563C8ED0D3C748B5F /* HvMessageQueue.c */; };
+		24F229193A03DB2B4E885766 /* HeavyContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2DE4D8563F16DBE030529A9 /* HeavyContext.cpp */; };
+		8ECE86CAD107E301AA67CCF8 /* HvMessagePool.c in Sources */ = {isa = PBXBuildFile; fileRef = 574479009B5B2ACBE6E2E90F /* HvMessagePool.c */; };
+		CA37AEE9D33380EE06E6EA99 /* Heavy_epmk.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C7843A8255DA083669AB083 /* Heavy_epmk.cpp */; };
+		90E3DF9C1C27618200427603 /* audioeffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 90E3DF921C27618200427603 /* audioeffect.cpp */; };
+		90E3DF9D1C27618200427603 /* audioeffectx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 90E3DF941C27618200427603 /* audioeffectx.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		46069C17EFFDDA5A07BEB49B /* HvSignalVar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvSignalVar.h; path = ../source/HvSignalVar.h; sourceTree = SOURCE_ROOT; };
+		34E9434488D375100622B8DA /* HvSignalRPole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvSignalRPole.h; path = ../source/HvSignalRPole.h; sourceTree = SOURCE_ROOT; };
+		67577C344160AFF1A98BE611 /* HvTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvTable.h; path = ../source/HvTable.h; sourceTree = SOURCE_ROOT; };
+		B65F2DD48DFDCE09FFC595F1 /* HvSignalPhasor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvSignalPhasor.h; path = ../source/HvSignalPhasor.h; sourceTree = SOURCE_ROOT; };
+		E78DF993C8820E0C6CB4517D /* HvControlSlice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvControlSlice.h; path = ../source/HvControlSlice.h; sourceTree = SOURCE_ROOT; };
+		0E51038C91C7F8C29605C495 /* HvHeavy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvHeavy.h; path = ../source/HvHeavy.h; sourceTree = SOURCE_ROOT; };
+		D03E173EB4903B1B5F682157 /* HvControlPack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvControlPack.h; path = ../source/HvControlPack.h; sourceTree = SOURCE_ROOT; };
+		081E8E34FFCF5176734709C4 /* HvControlTabread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvControlTabread.h; path = ../source/HvControlTabread.h; sourceTree = SOURCE_ROOT; };
+		3B8F016157E2CF82D7EF7F46 /* HvMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvMessage.h; path = ../source/HvMessage.h; sourceTree = SOURCE_ROOT; };
+		99C1606A40698F6734119AB3 /* HvMessageQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvMessageQueue.h; path = ../source/HvMessageQueue.h; sourceTree = SOURCE_ROOT; };
+		88C66CF4638902203AB85F8A /* HvControlIf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvControlIf.h; path = ../source/HvControlIf.h; sourceTree = SOURCE_ROOT; };
+		23E6A392ADBFF734344F7AF4 /* HvMessagePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvMessagePool.h; path = ../source/HvMessagePool.h; sourceTree = SOURCE_ROOT; };
+		D4861C4A16A1566FA36D5689 /* HvSignalDel1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvSignalDel1.h; path = ../source/HvSignalDel1.h; sourceTree = SOURCE_ROOT; };
+		7CEE016E2E54AD96E1A4AFE3 /* HvControlBinop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvControlBinop.h; path = ../source/HvControlBinop.h; sourceTree = SOURCE_ROOT; };
+		6D9F11479DC81FD5A48D9271 /* HvControlCast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvControlCast.h; path = ../source/HvControlCast.h; sourceTree = SOURCE_ROOT; };
+		EF0041F378CCA61B6923287C /* HvControlUnop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvControlUnop.h; path = ../source/HvControlUnop.h; sourceTree = SOURCE_ROOT; };
+		0F451E6A957A3ECB3F8AC0B8 /* HvUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvUtils.h; path = ../source/HvUtils.h; sourceTree = SOURCE_ROOT; };
+		ED1AF3CDE4215E05419DE020 /* HvControlDelay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvControlDelay.h; path = ../source/HvControlDelay.h; sourceTree = SOURCE_ROOT; };
+		AB57CCCE8AE6EE15F8174895 /* HvControlSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvControlSystem.h; path = ../source/HvControlSystem.h; sourceTree = SOURCE_ROOT; };
+		53B042FA05782FFAEC50D58B /* HvMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvMath.h; path = ../source/HvMath.h; sourceTree = SOURCE_ROOT; };
+		C4391FD5973D72F332E933EC /* HvControlTabwrite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvControlTabwrite.h; path = ../source/HvControlTabwrite.h; sourceTree = SOURCE_ROOT; };
+		D7C3C4B80CBBF279A145D0B1 /* HvControlVar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvControlVar.h; path = ../source/HvControlVar.h; sourceTree = SOURCE_ROOT; };
+		C27B9453F8FC965583451719 /* HvSignalBiquad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvSignalBiquad.h; path = ../source/HvSignalBiquad.h; sourceTree = SOURCE_ROOT; };
+		52692EC40E50DB571280BCC2 /* Heavy_epmk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Heavy_epmk.h; path = ../source/Heavy_epmk.h; sourceTree = SOURCE_ROOT; };
+		7963EBCFC2E67A7AE088404D /* HvHeavyInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvHeavyInternal.h; path = ../source/HvHeavyInternal.h; sourceTree = SOURCE_ROOT; };
+		D0AD6EA99334FF48CB7C9AF0 /* HvSignalLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvSignalLine.h; path = ../source/HvSignalLine.h; sourceTree = SOURCE_ROOT; };
+		48C5E368FBAF2E54D2BDDA6D /* HvLightPipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvLightPipe.h; path = ../source/HvLightPipe.h; sourceTree = SOURCE_ROOT; };
+		2F46D6B6040C8190E879860D /* HeavyContext.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = HeavyContext.hpp; path = ../source/HeavyContext.hpp; sourceTree = SOURCE_ROOT; };
+		3EC35FBAB42C645587DD321B /* Heavy_epmk.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Heavy_epmk.hpp; path = ../source/Heavy_epmk.hpp; sourceTree = SOURCE_ROOT; };
+		9868A1195820CA643BAA0A1B /* HeavyContextInterface.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = HeavyContextInterface.hpp; path = ../source/HeavyContextInterface.hpp; sourceTree = SOURCE_ROOT; };
+		4BA35D3FE1E8DE7D80F6C766 /* HeavyVst2_epmk.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = HeavyVst2_epmk.hpp; path = ../source/HeavyVst2_epmk.hpp; sourceTree = SOURCE_ROOT; };
+		64AFFCE0BD07CDFB3EB5CF06 /* HvUtils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvUtils.c; path = ../source/HvUtils.c; sourceTree = SOURCE_ROOT; };
+		3F64D733D40AF05E19D2FF0F /* HvControlUnop.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvControlUnop.c; path = ../source/HvControlUnop.c; sourceTree = SOURCE_ROOT; };
+		CE8C319C6B070F22AF896D3D /* HvControlCast.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvControlCast.c; path = ../source/HvControlCast.c; sourceTree = SOURCE_ROOT; };
+		9E4958191AF8A9364B0A8BDD /* HvControlBinop.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvControlBinop.c; path = ../source/HvControlBinop.c; sourceTree = SOURCE_ROOT; };
+		8B32EDEF188DEC66F0C521D6 /* HvControlSystem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvControlSystem.c; path = ../source/HvControlSystem.c; sourceTree = SOURCE_ROOT; };
+		EEBE43C111A94FD2BF4A64B6 /* HvControlDelay.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvControlDelay.c; path = ../source/HvControlDelay.c; sourceTree = SOURCE_ROOT; };
+		8063BC771379620AD9BDCA45 /* HvSignalLine.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvSignalLine.c; path = ../source/HvSignalLine.c; sourceTree = SOURCE_ROOT; };
+		3ED35C0FD1D4B40EEE86E2E0 /* HvSignalBiquad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvSignalBiquad.c; path = ../source/HvSignalBiquad.c; sourceTree = SOURCE_ROOT; };
+		4110CB54001109C30AF1D967 /* HvControlTabwrite.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvControlTabwrite.c; path = ../source/HvControlTabwrite.c; sourceTree = SOURCE_ROOT; };
+		56737F77C1D31D9834298CFD /* HvControlVar.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvControlVar.c; path = ../source/HvControlVar.c; sourceTree = SOURCE_ROOT; };
+		5CE58FA2A811A9BF79964921 /* HvLightPipe.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvLightPipe.c; path = ../source/HvLightPipe.c; sourceTree = SOURCE_ROOT; };
+		04A1EAEEAAF93579F0A519F1 /* HvSignalRPole.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvSignalRPole.c; path = ../source/HvSignalRPole.c; sourceTree = SOURCE_ROOT; };
+		0EB97D280EAED44B8F57DFF1 /* HvSignalVar.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvSignalVar.c; path = ../source/HvSignalVar.c; sourceTree = SOURCE_ROOT; };
+		34F95753E4098E57595E3727 /* HvControlTabread.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvControlTabread.c; path = ../source/HvControlTabread.c; sourceTree = SOURCE_ROOT; };
+		4A8714BD23361ACEE6EE4DF6 /* HvMessage.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvMessage.c; path = ../source/HvMessage.c; sourceTree = SOURCE_ROOT; };
+		CA752B34A87AAD5D35071C87 /* HvControlPack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvControlPack.c; path = ../source/HvControlPack.c; sourceTree = SOURCE_ROOT; };
+		9ECDB82E48CDD05997E1B004 /* HvControlSlice.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvControlSlice.c; path = ../source/HvControlSlice.c; sourceTree = SOURCE_ROOT; };
+		7FC2753A001FA5BD0EC207E4 /* HvSignalPhasor.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvSignalPhasor.c; path = ../source/HvSignalPhasor.c; sourceTree = SOURCE_ROOT; };
+		02C1E89B88741268A29EE503 /* HvTable.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvTable.c; path = ../source/HvTable.c; sourceTree = SOURCE_ROOT; };
+		6F321A3035D48261DF283DBD /* HvSignalDel1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvSignalDel1.c; path = ../source/HvSignalDel1.c; sourceTree = SOURCE_ROOT; };
+		23EABC56A4A5EFC8525EAFE1 /* HvControlIf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvControlIf.c; path = ../source/HvControlIf.c; sourceTree = SOURCE_ROOT; };
+		8C05428563C8ED0D3C748B5F /* HvMessageQueue.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvMessageQueue.c; path = ../source/HvMessageQueue.c; sourceTree = SOURCE_ROOT; };
+		574479009B5B2ACBE6E2E90F /* HvMessagePool.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvMessagePool.c; path = ../source/HvMessagePool.c; sourceTree = SOURCE_ROOT; };
+		CED794FF56F8B2CC325BFE81 /* HeavyVst2_epmk.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HeavyVst2_epmk.cpp; path = ../source/HeavyVst2_epmk.cpp; sourceTree = SOURCE_ROOT; };
+		454F7F6845208EC973180730 /* HvHeavy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HvHeavy.cpp; path = ../source/HvHeavy.cpp; sourceTree = SOURCE_ROOT; };
+		C2DE4D8563F16DBE030529A9 /* HeavyContext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HeavyContext.cpp; path = ../source/HeavyContext.cpp; sourceTree = SOURCE_ROOT; };
+		4C7843A8255DA083669AB083 /* Heavy_epmk.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Heavy_epmk.cpp; path = ../source/Heavy_epmk.cpp; sourceTree = SOURCE_ROOT; };
+		90E3DF911C27618200427603 /* aeffeditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = aeffeditor.h; path = ../source/vst2/aeffeditor.h; sourceTree = SOURCE_ROOT; };
+		90E3DF921C27618200427603 /* audioeffect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = audioeffect.cpp; path = ../source/vst2/audioeffect.cpp; sourceTree = SOURCE_ROOT; };
+		90E3DF931C27618200427603 /* audioeffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = audioeffect.h; path = ../source/vst2/audioeffect.h; sourceTree = SOURCE_ROOT; };
+		90E3DF941C27618200427603 /* audioeffectx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = audioeffectx.cpp; path = ../source/vst2/audioeffectx.cpp; sourceTree = SOURCE_ROOT; };
+		90E3DF951C27618200427603 /* audioeffectx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = audioeffectx.h; path = ../source/vst2/audioeffectx.h; sourceTree = SOURCE_ROOT; };
+		90E3DF981C27618200427603 /* aeffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = aeffect.h; path = ../source/vst2/pluginterfaces/vst2.x/aeffect.h; sourceTree = SOURCE_ROOT; };
+		90E3DF991C27618200427603 /* aeffectx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = aeffectx.h; path = ../source/vst2/pluginterfaces/vst2.x/aeffectx.h; sourceTree = SOURCE_ROOT; };
+		90E3DF9A1C27618200427603 /* vstfxstore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vstfxstore.h; path = ../source/vst2/pluginterfaces/vst2.x/vstfxstore.h; sourceTree = SOURCE_ROOT; };
+		90660BBA1C2AAAFC00D7CED7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
+		909650881C26156B00F0FC3B /* epmk.vst */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = epmk.vst; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		909650851C26156B00F0FC3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9096507F1C26156B00F0FC3B = {
+			isa = PBXGroup;
+			children = (
+				9096508A1C26156B00F0FC3B /* Source */,
+				909650891C26156B00F0FC3B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		909650891C26156B00F0FC3B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				909650881C26156B00F0FC3B /* epmk.vst */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9096508A1C26156B00F0FC3B /* epmk */ = {
+			isa = PBXGroup;
+			children = (
+				909650BC1C26159800F0FC3B /* vst2 */,
+				909650BB1C26158600F0FC3B /* heavy */,
+				90660BBA1C2AAAFC00D7CED7 /* Info.plist */,
+			);
+			path = epmk;
+			sourceTree = "<group>";
+		};
+		909650BB1C26158600F0FC3B /* heavy */ = {
+			isa = PBXGroup;
+			children = (
+				64AFFCE0BD07CDFB3EB5CF06 /* HvUtils.c */,
+				46069C17EFFDDA5A07BEB49B /* HvSignalVar.h */,
+				3F64D733D40AF05E19D2FF0F /* HvControlUnop.c */,
+				CE8C319C6B070F22AF896D3D /* HvControlCast.c */,
+				2F46D6B6040C8190E879860D /* HeavyContext.hpp */,
+				9E4958191AF8A9364B0A8BDD /* HvControlBinop.c */,
+				3EC35FBAB42C645587DD321B /* Heavy_epmk.hpp */,
+				34E9434488D375100622B8DA /* HvSignalRPole.h */,
+				67577C344160AFF1A98BE611 /* HvTable.h */,
+				8B32EDEF188DEC66F0C521D6 /* HvControlSystem.c */,
+				B65F2DD48DFDCE09FFC595F1 /* HvSignalPhasor.h */,
+				EEBE43C111A94FD2BF4A64B6 /* HvControlDelay.c */,
+				CED794FF56F8B2CC325BFE81 /* HeavyVst2_epmk.cpp */,
+				E78DF993C8820E0C6CB4517D /* HvControlSlice.h */,
+				0E51038C91C7F8C29605C495 /* HvHeavy.h */,
+				D03E173EB4903B1B5F682157 /* HvControlPack.h */,
+				081E8E34FFCF5176734709C4 /* HvControlTabread.h */,
+				3B8F016157E2CF82D7EF7F46 /* HvMessage.h */,
+				8063BC771379620AD9BDCA45 /* HvSignalLine.c */,
+				99C1606A40698F6734119AB3 /* HvMessageQueue.h */,
+				88C66CF4638902203AB85F8A /* HvControlIf.h */,
+				23E6A392ADBFF734344F7AF4 /* HvMessagePool.h */,
+				D4861C4A16A1566FA36D5689 /* HvSignalDel1.h */,
+				3ED35C0FD1D4B40EEE86E2E0 /* HvSignalBiquad.c */,
+				4110CB54001109C30AF1D967 /* HvControlTabwrite.c */,
+				56737F77C1D31D9834298CFD /* HvControlVar.c */,
+				454F7F6845208EC973180730 /* HvHeavy.cpp */,
+				5CE58FA2A811A9BF79964921 /* HvLightPipe.c */,
+				7CEE016E2E54AD96E1A4AFE3 /* HvControlBinop.h */,
+				04A1EAEEAAF93579F0A519F1 /* HvSignalRPole.c */,
+				9868A1195820CA643BAA0A1B /* HeavyContextInterface.hpp */,
+				6D9F11479DC81FD5A48D9271 /* HvControlCast.h */,
+				EF0041F378CCA61B6923287C /* HvControlUnop.h */,
+				0EB97D280EAED44B8F57DFF1 /* HvSignalVar.c */,
+				0F451E6A957A3ECB3F8AC0B8 /* HvUtils.h */,
+				34F95753E4098E57595E3727 /* HvControlTabread.c */,
+				4A8714BD23361ACEE6EE4DF6 /* HvMessage.c */,
+				CA752B34A87AAD5D35071C87 /* HvControlPack.c */,
+				ED1AF3CDE4215E05419DE020 /* HvControlDelay.h */,
+				9ECDB82E48CDD05997E1B004 /* HvControlSlice.c */,
+				7FC2753A001FA5BD0EC207E4 /* HvSignalPhasor.c */,
+				02C1E89B88741268A29EE503 /* HvTable.c */,
+				AB57CCCE8AE6EE15F8174895 /* HvControlSystem.h */,
+				53B042FA05782FFAEC50D58B /* HvMath.h */,
+				C4391FD5973D72F332E933EC /* HvControlTabwrite.h */,
+				D7C3C4B80CBBF279A145D0B1 /* HvControlVar.h */,
+				6F321A3035D48261DF283DBD /* HvSignalDel1.c */,
+				C27B9453F8FC965583451719 /* HvSignalBiquad.h */,
+				23EABC56A4A5EFC8525EAFE1 /* HvControlIf.c */,
+				8C05428563C8ED0D3C748B5F /* HvMessageQueue.c */,
+				52692EC40E50DB571280BCC2 /* Heavy_epmk.h */,
+				C2DE4D8563F16DBE030529A9 /* HeavyContext.cpp */,
+				574479009B5B2ACBE6E2E90F /* HvMessagePool.c */,
+				7963EBCFC2E67A7AE088404D /* HvHeavyInternal.h */,
+				D0AD6EA99334FF48CB7C9AF0 /* HvSignalLine.h */,
+				4C7843A8255DA083669AB083 /* Heavy_epmk.cpp */,
+				4BA35D3FE1E8DE7D80F6C766 /* HeavyVst2_epmk.hpp */,
+				48C5E368FBAF2E54D2BDDA6D /* HvLightPipe.h */,
+			);
+			name = heavy;
+			sourceTree = "<group>";
+		};
+		909650BC1C26159800F0FC3B /* vst2 */ = {
+			isa = PBXGroup;
+			children = (
+				90E3DF911C27618200427603 /* aeffeditor.h */,
+				90E3DF921C27618200427603 /* audioeffect.cpp */,
+				90E3DF931C27618200427603 /* audioeffect.h */,
+				90E3DF941C27618200427603 /* audioeffectx.cpp */,
+				90E3DF951C27618200427603 /* audioeffectx.h */,
+				90E3DF961C27618200427603 /* pluginterfaces */,
+			);
+			name = vst2;
+			sourceTree = "<group>";
+		};
+		90E3DF961C27618200427603 /* pluginterfaces */ = {
+			isa = PBXGroup;
+			children = (
+				90E3DF971C27618200427603 /* vst2.x */,
+			);
+			name = pluginterfaces;
+			path = ../../vst2.4/pluginterfaces;
+			sourceTree = "<group>";
+		};
+		90E3DF971C27618200427603 /* vst2.x */ = {
+			isa = PBXGroup;
+			children = (
+				90E3DF981C27618200427603 /* aeffect.h */,
+				90E3DF991C27618200427603 /* aeffectx.h */,
+				90E3DF9A1C27618200427603 /* vstfxstore.h */,
+			);
+			path = vst2.x;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		909650871C26156B00F0FC3B /* epmk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9096508E1C26156B00F0FC3B /* Build configuration list for PBXNativeTarget "epmk" */;
+			buildPhases = (
+				909650841C26156B00F0FC3B /* Sources */,
+				909650851C26156B00F0FC3B /* Frameworks */,
+				909650861C26156B00F0FC3B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = epmk;
+			productName = epmk;
+			productReference = 909650881C26156B00F0FC3B /* epmk.vst */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		909650801C26156B00F0FC3B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Enzien Audio, Ltd.";
+				TargetAttributes = {
+					909650871C26156B00F0FC3B = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 909650831C26156B00F0FC3B /* Build configuration list for PBXProject "epmk" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9096507F1C26156B00F0FC3B;
+			productRefGroup = 909650891C26156B00F0FC3B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				909650871C26156B00F0FC3B /* epmk */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		909650861C26156B00F0FC3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90660BBB1C2AAAFC00D7CED7 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		909650841C26156B00F0FC3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10531700F5D24DC88D0720E /* HvUtils.c in Sources */,
+				BE14D238724569589B22F69F /* HvControlUnop.c in Sources */,
+				7871CE173FE09349B703ACC9 /* HvControlCast.c in Sources */,
+				D93E61C60382DE636916E741 /* HvControlBinop.c in Sources */,
+				9C00605BEAC64AB259BF7601 /* HvControlSystem.c in Sources */,
+				76930517BE8FF04810682B10 /* HvControlDelay.c in Sources */,
+				DD250AC9A856437A472A5120 /* HeavyVst2_epmk.cpp in Sources */,
+				C06AC917F3C93D35AD3286CE /* HvSignalLine.c in Sources */,
+				5C5D249E5A9E3EEB705D62FF /* HvSignalBiquad.c in Sources */,
+				004A1C8B62B1BDA2CF7A3514 /* HvControlTabwrite.c in Sources */,
+				4003D81DCFA9CFAEABC4924F /* HvControlVar.c in Sources */,
+				F57B380CD7FFB60906DD3362 /* HvHeavy.cpp in Sources */,
+				D39C4FCDBA5685538D4FCDDE /* HvLightPipe.c in Sources */,
+				DC3BFF73C7F6A3835D60A209 /* HvSignalRPole.c in Sources */,
+				E272CCC8BB4D1CAFDD035CA6 /* HvSignalVar.c in Sources */,
+				914ECA3B47C464E50750B0B2 /* HvControlTabread.c in Sources */,
+				52B75B1393CD6DE1FD4F5F0E /* HvMessage.c in Sources */,
+				CFCE1511229BD00AD89667B8 /* HvControlPack.c in Sources */,
+				A468DB7832130C4B9FD58185 /* HvControlSlice.c in Sources */,
+				25D90D61EA7B5157046EDD5A /* HvSignalPhasor.c in Sources */,
+				7764B9BACD53B060CE745576 /* HvTable.c in Sources */,
+				C83E84C88F5211A89A205E60 /* HvSignalDel1.c in Sources */,
+				7314E3463FFC6F915AB98767 /* HvControlIf.c in Sources */,
+				CE9FFA524C763F79CC694150 /* HvMessageQueue.c in Sources */,
+				24F229193A03DB2B4E885766 /* HeavyContext.cpp in Sources */,
+				8ECE86CAD107E301AA67CCF8 /* HvMessagePool.c in Sources */,
+				CA37AEE9D33380EE06E6EA99 /* Heavy_epmk.cpp in Sources */,
+				90E3DF9D1C27618200427603 /* audioeffectx.cpp in Sources */,
+				90E3DF9C1C27618200427603 /* audioeffect.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		9096508C1C26156B00F0FC3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9096508D1C26156B00F0FC3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = fast;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CFLAGS = (
+					"-DHV_SIMD_SSE",
+					"-msse4.1",
+					"-ffast-math",
+					"-DNDEBUG",
+				);
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9096508F1C26156B00F0FC3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/macos/$(ARCHS)/debug";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.enzienaudio.epmk";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = vst;
+			};
+			name = Debug;
+		};
+		909650901C26156B00F0FC3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/macos/$(ARCHS)/release";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.enzienaudio.epmk";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = vst;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		909650831C26156B00F0FC3B /* Build configuration list for PBXProject "epmk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9096508C1C26156B00F0FC3B /* Debug */,
+				9096508D1C26156B00F0FC3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9096508E1C26156B00F0FC3B /* Build configuration list for PBXNativeTarget "epmk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9096508F1C26156B00F0FC3B /* Debug */,
+				909650901C26156B00F0FC3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 909650801C26156B00F0FC3B /* Project object */;
+}
