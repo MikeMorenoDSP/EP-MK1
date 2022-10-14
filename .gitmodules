@@ -1,0 +1,6 @@
+[submodule "EP-MK1-Plugins/EP-MK1-heavy/dpf"]
+	path = EP-MK1-Plugins/EP-MK1-heavy/dpf
+	url = https://github.com/DISTRHO/DPF.git
+[submodule "EP-MK1-Plugins/EP-MK1-heavy/heavylib"]
+	path = EP-MK1-Plugins/EP-MK1-heavy/heavylib
+	url = git@github.com:Wasted-Audio/heavylib.git
