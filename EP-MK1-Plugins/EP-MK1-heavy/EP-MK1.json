@@ -10,6 +10,7 @@
             "lv2_dsp",
             "vst2",
             "vst3",
+            "clap",
             "jack"
         ]
     }
