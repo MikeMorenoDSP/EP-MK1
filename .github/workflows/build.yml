@@ -1,0 +1,166 @@
+name: build
+
+on:
+  push:
+
+env:
+  HVCC_VERSION: 9fe1ea149e8d1314e4cea01bb467e4f540f2bca0
+
+jobs:
+  linux-x86_64:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.9
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install git+https://github.com/Wasted-Audio/hvcc.git@${{ env.HVCC_VERSION }}
+
+      - name: Build plugins
+        run: |
+          cd EP-MK1-Plugins/EP-MK1-heavy
+          hvcc _main.pd -n EP-MK1 -m EP-MK1.json -o . -g dpf -p heavylib
+          make WITH_LTO=true -j $(nproc)
+
+      - name: Set sha8 (non-release)
+        if: startsWith(github.ref, 'refs/tags/') != true
+        id: slug1
+        run: echo "action_tag=$(echo ${{ github.sha }} | cut -c1-8)" >> $GITHUB_ENV
+      - name: Set tag (release)
+        if: startsWith(github.ref, 'refs/tags/')
+        id: slug2
+        run: echo "action_tag=$(echo ${{ github.ref_name }})" >> $GITHUB_ENV
+
+      - name: Pack binaries
+        run: |
+          cd EP-MK1-Plugins/EP-MK1-heavy
+          tar -c -h  -z -f ${{ github.event.repository.name }}-linux-x86_64-${{ github.event.pull_request.number || env.action_tag }}.tar.gz bin/
+      - uses: actions/upload-artifact@v3
+        with:
+          name: ${{ github.event.repository.name }}-linux-x86_64-${{ github.event.pull_request.number || env.action_tag }}
+          path: |
+            EP-MK1-Plugins/EP-MK1-heavy/*.tar.gz
+      - uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: ${{ github.ref_name }}
+          draft: false
+          prerelease: false
+          files: |
+            *.tar.gz
+
+  win64:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.9
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install git+https://github.com/Wasted-Audio/hvcc.git@${{ env.HVCC_VERSION }}
+          sudo apt-get update -qq
+          sudo apt-get install -yqq binutils-mingw-w64-x86-64 g++-mingw-w64-x86-64 mingw-w64 wine-stable
+
+      - name: Build win64 cross-compiled plugins
+        env:
+          CC: x86_64-w64-mingw32-gcc
+          CXX: x86_64-w64-mingw32-g++
+          EXE_WRAPPER: wine
+          PKG_CONFIG: "false"
+          WINEDEBUG: "-all"
+        run: |
+          cd EP-MK1-Plugins/EP-MK1-heavy
+          hvcc _main.pd -n EP-MK1 -m EP-MK1.json -o . -g dpf -p heavylib
+          make WITH_LTO=true -j $(nproc)
+
+      - name: Set sha8 (non-release)
+        if: startsWith(github.ref, 'refs/tags/') != true
+        id: slug1
+        run: echo "action_tag=$(echo ${{ github.sha }} | cut -c1-8)" >> $GITHUB_ENV
+      - name: Set tag (release)
+        if: startsWith(github.ref, 'refs/tags/')
+        id: slug2
+        run: echo "action_tag=$(echo ${{ github.ref_name }})" >> $GITHUB_ENV
+      - name: Pack binaries
+        run: |
+          cd EP-MK1-Plugins/EP-MK1-heavy
+          tar -c -h -z -f ${{ github.event.repository.name }}-win64-${{ github.event.pull_request.number || env.action_tag }}.tar.gz bin/
+      - uses: actions/upload-artifact@v3
+        with:
+          name: ${{ github.event.repository.name }}-win64-${{ github.event.pull_request.number || env.action_tag }}
+          path: |
+            EP-MK1-Plugins/EP-MK1-heavy/*.tar.gz
+      - uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: ${{ github.ref_name }}
+          draft: false
+          prerelease: false
+          files: |
+            *.tar.gz
+
+  macos-universal:
+    runs-on: macos-11
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: recursive
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.9
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install git+https://github.com/Wasted-Audio/hvcc.git@${{ env.HVCC_VERSION }}
+
+      - name: Build macOS universal plugins
+        env:
+          CFLAGS: -arch x86_64 -arch arm64 -DMAC_OS_X_VERSION_MAX_ALLOWED=MAC_OS_X_VERSION_10_12 -mmacosx-version-min=10.12 -mtune=generic -msse -msse2
+          CXXFLAGS: -arch x86_64 -arch arm64 -DMAC_OS_X_VERSION_MAX_ALLOWED=MAC_OS_X_VERSION_10_12 -mmacosx-version-min=10.12 -mtune=generic -msse -msse2
+          LDFLAGS: -arch x86_64 -arch arm64 -mmacosx-version-min=10.12
+        run: |
+          cd EP-MK1-Plugins/EP-MK1-heavy
+          hvcc _main.pd -n EP-MK1 -m EP-MK1.json -o . -g dpf -p heavylib
+          make NOOPT=true WITH_LTO=true -j $(sysctl -n hw.logicalcpu)
+          ./dpf/utils/package-osx-bundles.sh
+
+      - name: Set sha8 (non-release)
+        if: startsWith(github.ref, 'refs/tags/') != true
+        id: slug1
+        run: echo "action_tag=$(echo ${{ github.sha }} | cut -c1-8)" >> $GITHUB_ENV
+      - name: Set tag (release)
+        if: startsWith(github.ref, 'refs/tags/')
+        id: slug2
+        run: echo "action_tag=$(echo ${{ github.ref_name }})" >> $GITHUB_ENV
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: ${{ github.event.repository.name }}-macOS-universal-${{ github.event.pull_request.number || env.action_tag }}
+          path: |
+            EP-MK1-Plugins/EP-MK1-heavy/*-macOS.pkg
+
+      - uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: ${{ github.ref_name }}
+          draft: false
+          prerelease: false
+          files: |
+            *.tar.gz

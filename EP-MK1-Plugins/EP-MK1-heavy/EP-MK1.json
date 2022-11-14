@@ -1,0 +1,18 @@
+{
+    "dpf": {
+        "project": true,
+        "description": "EP-MK1",
+        "maker": "Miguel Moreno",
+        "license": "GPL-3.0",
+        "midi_input": 1,
+        "midi_output": 0,
+        "plugin_formats": [
+            "lv2_dsp",
+            "vst2",
+            "vst3",
+            "clap",
+            "jack"
+        ]
+    }
+}
+
